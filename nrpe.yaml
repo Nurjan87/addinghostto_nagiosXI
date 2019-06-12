@@ -1,6 +1,6 @@
 ---
 - name: Install and configure nrpe agent
-  hosts: nrpe
+  hosts: nrp
   become: yes
   become_method: sudo
   tasks:
