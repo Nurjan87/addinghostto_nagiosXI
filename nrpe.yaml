@@ -1,0 +1,15 @@
+---
+- name: Install and configure nrpe agent
+  hosts: nrpe
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Download and unzip nrpe agent
+      unarchive:
+        src: https://assets.nagios.com/downloads/nagiosxi/agents/linux-nrpe-agent.tar.gz
+        dest: /tmp
+        remote_src: yes
+    - name: Install nrpe agent
+      shell: printf 'y\n34.243.80.122\n' | /tmp/linux-nrpe-agent/fullinstall
+      args:
+        chdir: /tmp/linux-nrpe-agent
