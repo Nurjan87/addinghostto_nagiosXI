@@ -1,2 +1,2 @@
 [mytest_host]
-18.221.17.210 ansible_user=centos
+"{{host_ip}}" ansible_user=centos
