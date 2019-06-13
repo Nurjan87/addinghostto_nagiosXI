@@ -1,6 +1,6 @@
 ---
 - name: Install and configure nrpe agent
-  hosts: nrp
+  hosts: mytest_host
   become: yes
   become_method: sudo
   tasks:
@@ -10,6 +10,6 @@
         dest: /tmp
         remote_src: yes
     - name: Install nrpe agent
-      shell: printf 'y\n34.243.80.122\n' | /tmp/linux-nrpe-agent/fullinstall
+      shell: printf 'y\n34.240.108.216\n' | /tmp/linux-nrpe-agent/fullinstall
       args:
         chdir: /tmp/linux-nrpe-agent
