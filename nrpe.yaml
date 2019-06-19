@@ -1,6 +1,6 @@
 ---
 - name: Install and configure nrpe agent
-  hosts: mytest_host
+  hosts: "{{host_ip}}"
   become: yes
   become_method: sudo
   tasks:
